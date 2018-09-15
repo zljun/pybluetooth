@@ -1,4 +1,5 @@
 ﻿from enum import IntEnum, IntFlag
+#from include.bt_types import *
 
 class int8(int):    
     def __len__(self):
@@ -42,19 +43,14 @@ class uint32(int):
         return self.repr
 
     def __len__(self):
-        return 4
+        return 4  
 
-class bdaddr_t(bytearray):
-    def __repr__(self):
-        self.repr = '{:02X}:{:02X}:{:02X}:{:02X}:{:02X}:{:02X}'.format(self[5],self[4],self[3],self[2],self[1],self[0])
-        return self.repr
-
-    def __str__(self):
-        return self.__repr__()
-
-    def __len__(self):
-        return 6    
-        
+class uint16_be(uint16):
+    pass
+    
+class uint32_be(uint32):
+    pass
+    
 class IntEnum8(IntEnum):    
     def __len__(self):
         return 1   
@@ -74,5 +70,4 @@ class IntFlag16(IntFlag):
 class IntFlag32(IntFlag):    
     def __len__(self):
         return 4
-
 
