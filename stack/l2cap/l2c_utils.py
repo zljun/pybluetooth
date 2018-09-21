@@ -3,8 +3,6 @@ from bt_types import *
 from hci_usb import *
 from hci_def import *
 
-tL2C_LCB* 
-
 class l2c_utils():
     
     def __init__(self):

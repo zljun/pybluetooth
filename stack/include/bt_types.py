@@ -20,6 +20,25 @@ class bdaddr_t(bytearray):
     def __len__(self):
         return 6  
 
+class psm_t(IntEnum16):
+    SDP = 0x0001 #See Bluetooth Service Discovery Protocol (SDP), Bluetooth SIG
+    RFCOMM = 0x0003 #See RFCOMM with TS 07.10, Bluetooth SIG
+    TCS_BIN = 0x0005 #See Bluetooth Telephony Control Specification / TCS Binary, Bluetooth SIG
+    TCS_BIN_CORDLESS = 0x0007 #See Bluetooth Telephony Control Specification / TCS Binary, Bluetooth SIG
+    BNEP = 0x000F #See Bluetooth Network Encapsulation Protocol, Bluetooth SIG
+    HID_Control = 0x0011 #See Human Interface Device, Bluetooth SIG
+    HID_Interrupt = 0x0013 #See Human Interface Device, Bluetooth SIG
+    UPnP = 0x0015 #See [ESDP] , Bluetooth SIG
+    AVCTP = 0x0017 #See Audio/Video Control Transport Protocol, Bluetooth SIG
+    AVDTP = 0x0019 #See Audio/Video Distribution Transport Protocol, Bluetooth SIG
+    AVCTP_Browsing = 0x001B #See Audio/Video Remote Control Profile, Bluetooth SIG
+    UDI_C_Plane = 0x001D #See the Unrestricted Digital Information Profile [UDI], Bluetooth SIG
+    ATT = 0x001F #See Bluetooth Core Specification.​​
+    _3DSP = 0x0021 #​​See 3D Synchronization Profile, Bluetooth SIG.
+    LE_PSM_IPSP = 0x0023 #​See Internet Protocol Support Profile (IPSP), Bluetooth SIG
+    OTS = 0x0025 #See Object Transfer Service (OTS), Bluetooth SIG 
+
+
 class lmp_version(IntEnum16):
    V1_0b = 0
    V1_1 = 1
